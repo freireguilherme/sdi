@@ -12,6 +12,7 @@ class Servidor extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $guard = 'servidor';
     /**
      * The attributes that are mass assignable.
      *
@@ -19,8 +20,9 @@ class Servidor extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
-        'password',
+        'password'
     ];
 
     /**
