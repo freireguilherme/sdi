@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('servidors', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('username');
+            $table->string('email')->unique();
+            $table->string('password')->unique();
             $table->timestamps();
         });
     }
