@@ -12,6 +12,7 @@ class Candidato extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
 
+    protected $guard = 'candidato';
     /**
      * The attributes that are mass assignable.
      *
@@ -19,8 +20,20 @@ class Candidato extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'username',
         'email',
         'password',
+        'endereço',
+        'telefone',
+        'sexo',
+        'nome_da_mae',
+        'data_nascimento',
+        'cpf',
+        'rg',
+        'rg_orgao_expedidor',
+        'rg_data_emissao',
+        'escolaridade',
+        'vinculo',
     ];
 
     /**
