@@ -18,6 +18,21 @@ return [
         'passwords' => 'users',
     ],
 
+    'admin' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Admin::class,
+    ],
+
+    'servidor' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Servidor::class,
+    ],
+
+    'candidato' => [
+        'driver' => 'eloquent',
+        'model' => App\Models\Candidato::class,
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Guards
@@ -39,6 +54,21 @@ return [
         'web' => [
             'driver' => 'session',
             'provider' => 'users',
+        ],
+
+        'admin' => [
+            'driver' => 'session',
+            'provider' => 'admins',
+        ],
+
+        'servidor' => [
+            'driver' => 'session',
+            'provider' => 'servidors',
+        ],
+
+        'candidato' => [
+            'driver' => 'session',
+            'provider' => 'candidatos',
         ],
     ],
 
@@ -63,6 +93,21 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+
+        'servidors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Servidor::class,
+        ],
+
+        'candidatos' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Candidato::class,
         ],
 
         // 'users' => [
@@ -96,6 +141,21 @@ return [
             'table' => 'password_reset_tokens',
             'expire' => 60,
             'throttle' => 60,
+        ],
+
+        'admins' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
+        ],
+
+        'servidors' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Servidor::class,
+        ],
+
+        'candidatos' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Candidato::class,
         ],
     ],
 
