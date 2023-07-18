@@ -507,13 +507,13 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href={{ route('admin.create-edital')}} class="dropdown-toggle no-arrow">
+                                    <a href={{ route('editals.create')}} class="dropdown-toggle no-arrow">
                                         <span class="micon bi bi-receipt-cutoff"></span
                                         ><span class="mtext">Criar edital</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="invoice.html" class="dropdown-toggle no-arrow">
+                                    <a href={{ route('admin.manage-editais')}} class="dropdown-toggle no-arrow">
                                         <span class="micon bi bi-receipt-cutoff"></span
                                         ><span class="mtext">Gerenciar editais</span>
                                     </a>
@@ -536,17 +536,11 @@
                                         </span>
                                     </a>
                                 </li>
-                            @else
+                            @elseif(Route::is('editals.*') )
                             <li>
-                                <a href="calendar.html" class="dropdown-toggle no-arrow">
+                                <a href={{ route('admin.home') }} class="dropdown-toggle no-arrow">
                                     <span class="micon fa fa-home"></span
                                     ><span class="mtext">Início</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="invoice.html" class="dropdown-toggle no-arrow">
-                                    <span class="micon bi bi-receipt-cutoff"></span
-                                    ><span class="mtext">Invoice</span>
                                 </a>
                             </li>
                             <li>
@@ -582,9 +576,16 @@
 						<div class="row">
 							<div class="col-md-6 col-sm-12">
 								<div class="title">
-									<h5>Adminstração</h5>
-									<h6>Página inicial</h6>
-
+                                    @if( Route::is('admin.*') )
+                                        <h5>Adminstração</h5>
+                                        <h6>Página inicial</h6>
+                                    @elseif (Route::is('editals.*'))
+                                        <h5>Servidor</h5>
+                                        <h6>Página inicial</h6>
+                                    @else
+                                        <h5>Candidato</h5>
+                                        <h6>Página inicial</h6>
+                                    @endif
 								</div>
 							</div>
 						</div>
