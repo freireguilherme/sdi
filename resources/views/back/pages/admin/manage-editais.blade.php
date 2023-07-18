@@ -1,5 +1,5 @@
 @extends('back.layout.pages-layout')
-@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Home page')
+@section('pageTitle', isset($pageTitle) ? $pageTitle : 'Gerenciar editais')
 @section('content')
     <div class="pd-20 card-box mb-30">
         <div class="clearfix mb-20">
@@ -17,18 +17,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Chamada para seleção de coordenador</td>
-                    <td>13/01 a 13/02</td>
-                    <td style="color:red">Em andamento</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Processo seletivo para ingresso</td>
-                    <td>21/12 a 23/01</td>
-                    <td style="color:red">Encerrado</td>
-                </tr>
+                @foreach ($editais as $edital)
+                    <tr>
+                        <th scope="row">1</th>
+                        <td><a href={{ route('editals.show', $edital->id) }}>{{ $edital->name }}</a></td>
+                        <td>{{ date('d/m/Y', strtotime($edital->data_inicio)) . ' a ' . date('d/m/Y', strtotime($edital->data_fim)) }}</td>
+                        <td style="color:red">{{ $edital->status }}</td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
