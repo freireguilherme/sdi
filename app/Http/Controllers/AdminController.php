@@ -51,4 +51,19 @@ class AdminController extends Controller
         session()->flash('fail', 'Você saiu!');
         return redirect()->route('admin.login');
     }
+
+    public function profileView()
+    {
+        $admin = null;
+        if(Auth::guard('admin') -> check() ){
+            $admin = Admin::findOrFail(auth()->id());
+        }
+
+        return view('back.pages.admin.profile', compact('admin'));
+    }
+
+    public function createEdital()
+    {
+        return view('back.pages.admin.create-edital');
+    }
 }
