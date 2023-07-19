@@ -61,7 +61,7 @@
 				<div class="login-menu">
 					<ul>
                         @if (!Route::is('admin.*'))
-						    <li><a href="register.html">Register</a></li>
+						    <li><a href="{{ route('candidatos.create') }}">Register</a></li>
                         @endif
 					</ul>
 				</div>
