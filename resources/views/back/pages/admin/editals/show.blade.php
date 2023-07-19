@@ -79,7 +79,7 @@
                 <a class="btn btn-primary" href="{{route( 'admin.manage-editais' ) }}" role="button">Voltar</a>
             </div>
             <div class="col">
-                <a class="btn btn-primary" href="" role="button">Acessar participantes incritos</a>
+                <a class="btn btn-primary" href="{{ route ('admin.edital-subs')}}" role="button">Acessar participantes incritos</a>
             </div>
         </div>
     </form>
