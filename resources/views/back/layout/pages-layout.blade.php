@@ -537,30 +537,68 @@
                                     </a>
                                 </li>
                             @elseif(Route::is('editals.*') )
-                            <li>
-                                <a href={{ route('admin.home') }} class="dropdown-toggle no-arrow">
-                                    <span class="micon fa fa-home"></span
-                                    ><span class="mtext">Início</span>
-                                </a>
-                            </li>
-                            <li>
-                                <div class="dropdown-divider"></div>
-                            </li>
-                            <li>
-                                <div class="sidebar-small-cap">Configurações</div>
-                            </li>
-                            <li>
-                                <a
-                                    href=""
-                                    target="_blank"
-                                    class="dropdown-toggle no-arrow"
-                                >
-                                    <span class="micon fa fa-user"></span>
-                                    <span class="mtext"
-                                        >Perfil
-                                    </span>
-                                </a>
-                            </li>
+                                <li>
+                                    <a href={{ route('admin.home') }} class="dropdown-toggle no-arrow">
+                                        <span class="micon fa fa-home"></span
+                                        ><span class="mtext">Início</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="dropdown-divider"></div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-small-cap">Configurações</div>
+                                </li>
+                                <li>
+                                    <a
+                                        href=""
+                                        target="_blank"
+                                        class="dropdown-toggle no-arrow"
+                                    >
+                                        <span class="micon fa fa-user"></span>
+                                        <span class="mtext"
+                                            >Perfil
+                                        </span>
+                                    </a>
+                                </li>
+                            @elseif (Route::is('candidatos.*'))
+
+                                <li>
+                                    <a href= {{ route('candidatos.home') }} class="dropdown-toggle no-arrow">
+                                        <span class="micon fa fa-home"></span
+                                        ><span class="mtext">Início</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href={{ route('candidatos.show', 'candidato->id')}} class="dropdown-toggle no-arrow">
+                                        <span class="micon bi bi-receipt-cutoff"></span
+                                        ><span class="mtext">Dados Pessoais</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href={{ route('candidatos.show', 'candidato->id')}} class="dropdown-toggle no-arrow">
+                                        <span class="micon bi bi-receipt-cutoff"></span
+                                        ><span class="mtext">Inscrições</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="dropdown-divider"></div>
+                                </li>
+                                <li>
+                                    <div class="sidebar-small-cap">Configurações</div>
+                                </li>
+                                <li>
+                                    <a
+                                        href=""
+                                        target="_blank"
+                                        class="dropdown-toggle no-arrow"
+                                    >
+                                        <span class="micon fa fa-user"></span>
+                                        <span class="mtext"
+                                            >Perfil
+                                        </span>
+                                    </a>
+                                </li>
                             @endif
 
 					</ul>
