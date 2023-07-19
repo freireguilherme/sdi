@@ -17,7 +17,13 @@ class Authenticate extends Middleware
             if($request->routeIs('admin.*')){
                 session()->flash('fail', 'Você precisa entrar com sua conta primeiro');
                 return route('admin.login');
-            }
+            }if($request->routeIs('candidato.*')){
+                session()->flash('fail', 'Você precisa entrar com sua conta primeiro');
+                return route('candidatos.login');
+            }else
+                {
+                    return null;
+                }
         }
     }
 }
