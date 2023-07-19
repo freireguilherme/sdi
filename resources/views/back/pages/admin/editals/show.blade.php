@@ -18,22 +18,21 @@
 
         </div>
         <div class="row">
-            <div class="col-auto">
-                <label>Período de Inscrição</label><br>
+            <div class="col-sm-9">
+                <label>Período de Inscrição</label>
+                <div class="row">
+                    <div cclass="col-8 col-sm-6">
+                        <label>Data de início</label>
+                        <input class="form-control date-picker" placeholder="Select Date" type="text" name="data_inicio" value="{{ $edital->data_inicio}}" readonly="">
+                    </div>
+                    <div class="col-8 col-sm-6">
+                        <label>Data final</label>
+                        <input class="form-control date-picker" placeholder="Select Date" type="text" name="data_fim" value="{{ $edital->data_fim}}" readonly="">
+                    </div>
+                </div>
             </div>
-            <div class="col-auto" id="date-picker">
-                <label>Data de início</label>
-                <input class="form-control date-picker" placeholder="Select Date" type="text" name="data_inicio" value="{{ $edital->data_inicio}}" readonly="">
-            </div>
-            <div class="col-auto" id="date-picker">
-                <label>Data final</label>
-                <input class="form-control date-picker" placeholder="Select Date" type="text" name="data_fim" value="{{ $edital->data_fim}}" readonly="">
-            </div>
-            <div class="w-100">
-
-            </div>
-
         </div>
+
         <div class="row" style="padding: 15px">
             <div class="col-md-4 col-sm-12">
                 <div class="form-group">
@@ -75,14 +74,17 @@
             </div>
         </div>
 
-        <div class="actions clearfix" style="padding: 10px">
-            <ul role="menu" aria-label="Pagination">
+        <div class="form-row" style="padding: 10px">
+            <div class="col">
                 <a class="btn btn-primary" href="{{route( 'admin.manage-editais' ) }}" role="button">Voltar</a>
-            </ul>
+            </div>
+            <div class="col">
+                <a class="btn btn-primary" href="" role="button">Acessar participantes incritos</a>
+            </div>
         </div>
     </form>
         <script type="text/javascript">
-            $('#date-picker').datepicker({
+            $('.form-control date-picker').datepicker({
                 format: "dd/mm/YYYY",
                 language: "pt-BR"
             });
