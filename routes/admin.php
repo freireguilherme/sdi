@@ -13,6 +13,7 @@ Route::prefix('admin')->name('admin.')->group(function(){
     Route::middleware(['auth:admin', 'PreventBackHistory'])->group(function () {
         Route::view('/home', 'back.pages.admin.home')->name('home');
         Route::post('/logout_handler',[AdminController::class, 'logoutHandler'])->name('logout_handler');
-        Route::get('/create-edital',[AdminController::class, 'createEdital'])->name('create-edital');
+        //Route::get('/create-edital',[AdminController::class, 'createEdital'])->name('create-edital');
+        Route::get('/manage-editais',[AdminController::class, 'manageEditais'])->name('manage-editais');
     });
 });
