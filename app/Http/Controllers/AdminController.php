@@ -69,4 +69,17 @@ class AdminController extends Controller
         $editais = Edital::all();
         return view('back.pages.admin.manage-editais')->with('editais', $editais);
     }
+
+    public function home()
+    {
+        $editais = Edital::all();
+        return view('back.pages.admin.home')->with('editais', $editais);
+    }
+
+    public function editalSubs(Edital $edital)
+    {
+        //To do
+        //listar os participais incritos no edital
+        return view('back.pages.admin.edital-subs');
+    }
 }
