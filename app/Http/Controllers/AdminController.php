@@ -4,9 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use App\Models\Edital;
 
 class AdminController extends Controller
 {
+
     public function loginHandler(Request $request)
     {
         $fieldType = filter_var($request->login_id, FILTER_VALIDATE_EMAIL) ? 'email' : 'username';
@@ -62,8 +64,9 @@ class AdminController extends Controller
         return view('back.pages.admin.profile', compact('admin'));
     }
 
-    public function createEdital()
+    public function manageEditais()
     {
-        return view('back.pages.admin.create-edital');
+        $editais = Edital::all();
+        return view('back.pages.admin.manage-editais')->with('editais', $editais);
     }
 }
