@@ -17,18 +17,14 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">1</th>
-                    <td>Chamada para seleção de coordenador</td>
-                    <td>13/01 a 13/02</td>
-                    <td style="color:red">Em andamento</td>
-                </tr>
-                <tr>
-                    <th scope="row">2</th>
-                    <td>Processo seletivo para ingresso</td>
-                    <td>21/12 a 23/01</td>
-                    <td style="color:red">Encerrado</td>
-                </tr>
+                @foreach ($editais as $edital)
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>{{ $edital->name }}</td>
+                        <td>{{ date('d/m/Y', strtotime($edital->data_inicio)) . ' a ' . date('d/m/Y', strtotime($edital->data_fim)) }}</td>
+                        <td style="color:red">{{ $edital->status }}</td>
+                    </tr>
+                @endforeach
             </tbody>
         </table>
     </div>

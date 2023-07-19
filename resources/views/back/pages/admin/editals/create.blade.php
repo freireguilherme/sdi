@@ -40,9 +40,9 @@
                     <input type="number" class="form-control">
                 </div>
             </div>
-            <div class="form-group">
-                <label>Adicionar</label>
-                <input id="add_docs" type="number" value="0" name="add_docs " class="form-control" width="30px">
+            <div class="col-md-3 offset-md-3">
+                <label></label>
+                <button type="button" class="btn btn-outline-secondary" style="margin-top: 30px">Add</button>
             </div>
         </div>
         <div class="form-row">
@@ -58,15 +58,13 @@
                     <label class="form-check-label" for="exampleCheck1">Obrigatório?</label>
                 </div>
             </div>
-            <div class="form-group col-md-2">
                 <div class="col-md-3">
-                    <div class="form-group">
+                    <div class="col-md-6 offset-md-4">
                         <label></label>
-                        <button type="button" class="btn btn-outline-secondary">Add</button>
+                        <button type="button" class="btn btn-outline-secondary" style="margin-top: 30px">Add</button>
                     </div>
                 </div>
             </div>
-        </div>
 
         <div class="actions clearfix" style="padding: 10px">
             <ul role="menu" aria-label="Pagination">
@@ -79,5 +77,10 @@
             </ul>
         </div>
     </form>
-
+    @push('create-edital-scripts')
+        <script src="/back/src/plugins/switchery/switchery.min.js"></script>
+        <script src="/back/src/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+        <script src="/back/src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
+        <script src="/back/vendors/scripts/advanced-components.js"></script>
+    @endpush
 @endsection

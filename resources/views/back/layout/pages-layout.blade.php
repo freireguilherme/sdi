@@ -655,12 +655,8 @@
                 });
             }
         </script>
-        @if (Route::is('admin.create-edital'))
-            <script src="/back/src/plugins/switchery/switchery.min.js"></script>
-            <script src="/back/src/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
-            <script src="/back/src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
-            <script src="/back/vendors/scripts/advanced-components.js"></script>
-        @endif
         @stack('scripts')
+        @stack('tables-scripts')
+        @stack('create-edital-scripts')
 	</body>
 </html>
