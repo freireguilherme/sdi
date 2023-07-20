@@ -20,7 +20,7 @@
         <div class="row">
             <div class="col-auto">
                 <label>Período de Inscrição</label>
-                <input class="form-control datetimepicker-range" placeholder="Select Month" type="text">
+                <input class="form-control datetimepicker-range" placeholder="Selecione o período" type="text">
             </div>
             <div class="w-100">
 
