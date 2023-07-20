@@ -90,7 +90,7 @@
         <script>
             if( navigator.userAgent.indexOf("Firefox") != -1 ){
                 history.pushState(null, null, document.URL);
-                window.addEventListener('popstate' function(){
+                window.addEventListener('popstate', function(){
                     history.pushState(null, null, document.URL);
                 });
             }
