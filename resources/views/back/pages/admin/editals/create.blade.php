@@ -6,21 +6,25 @@
         <div class="form-row">
             <div class="col">
                 <label>Nome do edital</label>
-                <input class="form-control" type="text" placeholder="Entre com o nome do edital">
+                <input class="form-control" type="text" placeholder="Entre com o nome do edital" name="name">
             </div>
             <div class="col">
                 <div class="form-group">
                     <label>Numero do edital</label>
-                    <input class="form-control"  type="text" placeholder="Número do edital">
+                    <input class="form-control"  type="text" placeholder="Número do edital" name="numero">
                 </div>
 
             </div>
 
         </div>
         <div class="row">
-            <div class="col-auto">
-                <label>Período de Inscrição</label>
-                <input class="form-control datetimepicker-range" placeholder="Selecione o período" type="text">
+            <div class="col">
+                <label>Selecione o período de inscrição</label>
+                <div class="col-6 col-sm-3">
+                    <input class="form-control date-picker" placeholder="Selecione a data" type="text" id="data_inicio">
+                    <span style="margin-right: 10px"> ate</span>
+                    <input class="form-control date-picker" placeholder="Selecione a data" type="text" id="data_fim">
+                </div>
             </div>
             <div class="w-100">
 
@@ -82,5 +86,14 @@
         <script src="/back/src/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
         <script src="/back/src/plugins/bootstrap-touchspin/jquery.bootstrap-touchspin.js"></script>
         <script src="/back/vendors/scripts/advanced-components.js"></script>
+        <script>
+            $('.input-daterange input').each(function() {
+                $(this).datepicker('clearDates');
+            });
+        </script>
+        <script src="/back/src/plugins/jquery-asColor/dist/jquery-asColor.js"></script>
+		<script src="/back/src/plugins/jquery-asGradient/dist/jquery-asGradient.js"></script>
+		<script src="/back/src/plugins/jquery-asColorPicker/jquery-asColorPicker.js"></script>
+		<script src="/back/vendors/scripts/colorpicker.js"></script>
     @endpush
 @endsection
