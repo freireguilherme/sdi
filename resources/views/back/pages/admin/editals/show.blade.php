@@ -99,24 +99,19 @@
                 var salvar = document.getElementById("salvar")
                 salvar.removeAttribute("disabled");
 
-                var inputs_elements = document.getElementsByTagName("input");
-                var inputs_elements2 = document.querySelectorAll('input[readonly]');
-                console.log(inputs_elements2);
-                for(let i in inputs_elements2){
-                    if (inputs_elements2[i].hasAttribute('readonly')){
-                        inputs_elements2[i].removeAttribute("readonly");
+
+                var inputs_elements = document.querySelectorAll('input[readonly]');
+                for(let i in inputs_elements){
+                    if (inputs_elements[i].hasAttribute('readonly')){
+                        inputs_elements[i].removeAttribute("readonly");
                     }
                     else
                     {
-
+                        //To do
+                        // ativar novamente o readonly nos elementos
+                        //inputs_elements[i].setAttribute("readonly", "readonly");
                     }
-                    /*else
-                    {
-                        if(typeof inputs_elements[i] === 'object' && inputs_elements[i] != null && 'setAttribute' in inputs_elements[i])
-                        {
-                            inputs_elements[i].setAttribute("readonly", "readonly");
-                        }
-                    }*/
+
 
                 }
             }
