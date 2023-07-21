@@ -286,10 +286,8 @@
                                         @yield('sub-title')
                                     @elseif (Route::is('editals.*'))
                                         <h5>Servidor</h5>
-                                        <h6>Página inicial</h6>
                                     @else
                                         <h5>Candidato</h5>
-                                        <h6>Página inicial</h6>
                                     @endif
 								</div>
 							</div>
