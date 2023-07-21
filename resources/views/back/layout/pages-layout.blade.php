@@ -324,6 +324,7 @@
         </script>
         @stack('scripts')
         @stack('tables-scripts')
+        @stack('show-scripts')
         @stack('create-edital-scripts')
 	</body>
 </html>
