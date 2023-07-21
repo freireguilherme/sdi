@@ -36,6 +36,9 @@
                     </thead>
                     <tbody>
                         <tr>
+                            <!-- to do
+                                link para pagina do participante com todas
+                                suas informações e documentos -->
                             <th scope="row">1</th>
                             <td>032.425.653-71</td>
                             <td>Ana</td>
